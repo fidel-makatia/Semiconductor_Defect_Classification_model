@@ -240,11 +240,11 @@ pip install PySide6>=6.5 scikit-learn>=1.3
 # Download pre-trained model checkpoint (~1.2 GB)
 # From Hugging Face:
 mkdir -p problem_a/checkpoints
-# Download best_model.pt from https://huggingface.co/fidel-makatia/semiconductor-defect-classifier
+# Download best_model.pt from https://huggingface.co/Makatia/semiconductor-defect-classifier
 # and place it in problem_a/checkpoints/best_model.pt
 ```
 
-> **Pre-trained Model**: The model checkpoint (~1.2 GB) is hosted on [Hugging Face](https://huggingface.co/fidel-makatia/semiconductor-defect-classifier). Download `best_model.pt` and place it in `problem_a/checkpoints/`.
+> **Pre-trained Model**: The model checkpoint (~1.2 GB) is hosted on [Hugging Face](https://huggingface.co/Makatia/semiconductor-defect-classifier). Download `best_model.pt` and place it in `problem_a/checkpoints/`.
 >
 > **Packaged App**: A ready-to-run distribution (includes model + dependencies launcher) is available on [Google Drive](https://drive.google.com). Just unzip and run `run.bat` (Windows) or `run.sh` (Linux).
 
