@@ -1,0 +1,39 @@
+# Problem D: Static Voltage Drop Prediction - Configuration
+# ASU/ICCAD ML-for-IR-drop contest — uses ONLY official challenge data
+# Tuned for 96GB VRAM GPU
+
+data:
+  root: "../challenge/dataset/ML-for-IR-drop-main/ML-for-IR-drop-main/benchmarks/"
+  patch_size: 512               # Larger patches — 96GB VRAM handles this
+  batch_size: 16                # Shorter GPU kernels to avoid TDR timeout
+  num_workers: 4                # Fewer workers = less I/O contention on Windows
+  format: "contest"             # Force contest CSV format
+  pin_memory: true
+  cache_npy: true               # Cache CSVs as .npy for 100x faster reloading
+  oversample: 8                 # 8x random crop/aug diversity per epoch
+
+model:
+  in_channels: 3                # current_map, eff_dist_map, pdn_density
+  out_channels: 1               # IR drop map
+  base_filters: 96              # 96 -> 192 -> 384 -> 768 -> 1536 (~70M params)
+  dropout: 0.1
+
+training:
+  epochs: 200
+  lr: 3.0e-4
+  lr_min: 1.0e-6
+  weight_decay: 1.0e-4
+  lambda_under: 1.5             # Asymmetric loss underestimation penalty
+  loss_alpha: 0.3               # Weight for BCE hotspot component
+  hotspot_weight: 5.0           # Hotspot-weighted regression + BCE for F1
+  use_smooth_l1: true           # SmoothL1 (beta=1e-4 for mV-scale targets)
+  patience: 40                  # More patience with larger epochs
+  use_amp: true                 # Mixed precision training
+  grad_accum_steps: 2           # Effective batch size = 16 * 2 = 32
+
+output:
+  checkpoint_dir: "checkpoints/"
+  results_dir: "outputs/"
+  save_every: 10
+
+seed: 42

@@ -1,0 +1,61 @@
+# Data directories
+problem_d/data/
+problem_a/data/
+challenge/
+dist/
+dist2/
+build_pyinstaller/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Model checkpoints and outputs (hosted on Hugging Face)
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.onnx
+
+# Logs
+*.log
+wandb/
+runs/
+
+# OS
+.DS_Store
+Thumbs.db
+nul
+
+# C++ build artifacts
+app/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+*.vcxproj*
+*.sln
+
+# Screenshots and temp files
+screenshot_*.png
+test_screenshot.png
+page_*.png
+*.spec
+
+# Utility scripts (not part of the project)
+fix_tasks_dir.py
+run_extract.py
+run_extract.bat
+extract_*.py
+download_data.py
