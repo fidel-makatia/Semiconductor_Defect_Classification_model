@@ -9,6 +9,12 @@ A desktop application and deep learning pipeline for classifying semiconductor w
 ![Qt](https://img.shields.io/badge/Qt-PySide6-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+### Pre-trained Model
+
+**Download the model checkpoint (1.2 GB) from Hugging Face:**
+
+https://huggingface.co/Makatia/semiconductor-defect-classifier
+
 ---
 
 ## Table of Contents
