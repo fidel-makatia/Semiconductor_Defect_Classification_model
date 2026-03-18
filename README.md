@@ -252,7 +252,7 @@ mkdir -p problem_a/checkpoints
 
 > **Pre-trained Model**: The model checkpoint (~1.2 GB) is hosted on [Hugging Face](https://huggingface.co/Makatia/semiconductor-defect-classifier). Download `best_model.pt` and place it in `problem_a/checkpoints/`.
 >
-> **Packaged App**: A ready-to-run distribution (includes model + dependencies launcher) is available on [Google Drive](https://drive.google.com). Just unzip and run `run.bat` (Windows) or `run.sh` (Linux).
+> **Packaged App**: A ready-to-run distribution (includes model + dependencies launcher) is available on [Google Drive](https://drive.google.com/drive/folders/12migcKrLSo5II0LhCG046wkpJsL-dZkY?usp=sharing). Just unzip and run `run.bat` (Windows) or `run.sh` (Linux).
 
 ---
 
