@@ -9,6 +9,10 @@ A desktop application and deep learning pipeline for classifying semiconductor w
 ![Qt](https://img.shields.io/badge/Qt-PySide6-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+### Demo
+
+**Watch the app in action:** [Screen Recording](https://drive.google.com/file/d/1KuknUThzNRi38RkcxuFGmkPWv78bcIgO/view?usp=sharing)
+
 ### Pre-trained Model
 
 **Download the model checkpoint (1.2 GB) from Hugging Face:**
